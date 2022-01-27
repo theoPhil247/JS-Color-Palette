@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript_colorPalette</title>
+<body>
+    <style>
+	body{
+		background: #e3e3e3e3;
+	}
+        
+		h1{
+			/*margin-left: 35%;*/
+			text-align: center;
+			font-size: 3rem;
+		}
+		.box1{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#result{
+            width:300px;
+            height:300px;
+			/*margin:40px 0 15px 450px;*/
+            border: solid thin #b4b4b4;
+			box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.137);
+			transition: 1s ease-in-out; 
+		}
+		p{
+			font-size: 1.5em;
+		}
+
+		button{
+			width: 80px;
+			height: 30px;
+			border-radius: 50%;
+			margin: 10px 0 10px 80px;
+			border-style: none;
+			box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.137);
+			background: #f2f2f2;
+			cursor: pointer;
+		}
+		
+		.red:hover{
+			background: red;
+			Color: #FFF;
+		}
+		.orange:hover{
+			background: orange;
+			Color: #FFF;
+		}
+		.yellow:hover{
+			background: yellow;
+		}
+		.green:hover{
+			background: green;
+			Color: #FFF;
+		}
+		.blue:hover{
+			background: blue;
+			Color: #FFF;
+		}
+		.indigo:hover{
+			background: indigo;
+			Color: #FFF;
+		}
+		.violet:hover{
+			background: violet;
+			Color: #FFF;
+		}
+		
+    </style>
+</head>
+<body>
+	<div class="bigbox">
+		
+		<h1>Color Palette</h1>
+		<div class="box1">
+			<div id="result"></div>
+		</div>
+			<marquee behavior="" direction="">
+				<p id="ptag">Variety is the spice of life</p>
+			</marquee>
+
+			<button class="red" name="red"   onclick="grabColor(this);">Red</button>
+			<button class="orange" name="orange" onclick="grabColor(this);">Orange</button>
+			<button class="yellow" name="yellow"  onclick="grabColor(this);">Yellow</button>
+			<button class="green" name="green" onclick="grabColor(this);">Green</button>
+			<button class="blue" name="blue"  onclick="grabColor(this);">Blue</button>
+			<button class="indigo" name="indigo"  onclick="grabColor(this);">Indigo</button>
+			<button class="violet" name="violet"  onclick="grabColor(this);">Violet</button>
+	</div>	
+	
+    <script>
+    function grabColor(elem){
+        var rslt=document.getElementById("result");
+		var ptag=document.getElementById("ptag");
+        rslt.style.background=elem.name;
+		ptag.style.color=elem.name;
+//        alert(elem.name);
+    }
+    </script>
+
+</body>
+</html>
+
+
